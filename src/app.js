@@ -14,7 +14,7 @@ const partialPaths = path.join(__dirname, '../templates/partials')
 //Define paths for Express config
 
 const app = express()
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 
 app.use(express.static(publicDirectoryPath))
 
