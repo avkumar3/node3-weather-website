@@ -14,6 +14,8 @@ const partialPaths = path.join(__dirname, '../templates/partials')
 //Define paths for Express config
 
 const app = express()
+const port = process.env.port || 3000
+
 app.use(express.static(publicDirectoryPath))
 
 // Setup handle bars engine and view location
@@ -107,6 +109,6 @@ app.get('*', (req, res) => {
 // app.com/help
 // app.com/about
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is running on port 3000")
 })
